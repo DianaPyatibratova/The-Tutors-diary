@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дневник репетитора — кабинет репетитора</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header__content">
+        <a class="logo" href="index.html">Дневник репетитора</a>
+        <nav class="navigation">
+            <a href="#students">Ученики</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="container">
+            <p class="hero__label">Рабочее пространство репетитора</p>
+            <h1>Ученики, расписание и занятия в одном месте</h1>
+            <p class="hero__description">
+                Кабинет помогает хранить информацию об учениках и домашних заданиях.
+            </p>
+            <a class="button" href="#students">Перейти к ученикам</a>
+        </div>
+    </section>
+
+    <section class="students" id="students">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="section-label">Ученики</p>
+                <h2>Мои ученики</h2>
+                <p class="section-description">
+                    Здесь можно быстро посмотреть основную информацию об учениках и домашних заданиях.
+                </p>
+            </div>
+
+            <form class="student-filter">
+                <div class="form-field">
+                    <label for="student-search">Найти ученика</label>
+                    <input id="student-search" name="student-search" type="search" placeholder="Введите имя">
+                </div>
+
+                <div class="form-field">
+                    <label for="subject">Предмет</label>
+                    <select id="subject" name="subject">
+                        <option value="">Все предметы</option>
+                        <option value="math">Математика</option>
+                        <option value="algebra">Алгебра</option>
+                        <option value="informatics">Информатика</option>
+                    </select>
+                </div>
+
+                <button type="submit">Найти</button>
+            </form>
+
+            <div class="students-grid">
+
+                <article class="student-card">
+                    <div class="student-card__header">
+                        <div class="student-avatar">А</div>
+                        <div><h3>Андрей</h3><p>8 класс</p></div>
+                    </div>
+                    <p class="student-card__description">Подготовка по алгебре.</p>
+                    <div class="student-info">
+                        <p><span>Предмет:</span> Алгебра</p>
+                        <p><span>Домашнее задание:</span> Задано</p>
+                    </div>
+                </article>
+
+                <article class="student-card">
+                    <div class="student-card__header">
+                        <div class="student-avatar">Д</div>
+                        <div><h3>Диана</h3><p>9 класс</p></div>
+                    </div>
+                    <p class="student-card__description">Подготовка к ОГЭ по математике.</p>
+                    <div class="student-info">
+                        <p><span>Предмет:</span> Математика</p>
+                        <p><span>Домашнее задание:</span> Выполнено</p>
+                    </div>
+                </article>
+
+                <article class="student-card">
+                    <div class="student-card__header">
+                        <div class="student-avatar">А</div>
+                        <div><h3>Аяз</h3><p>9 класс</p></div>
+                    </div>
+                    <p class="student-card__description">Подготовка к ОГЭ по информатике.</p>
+                    <div class="student-info">
+                        <p><span>Предмет:</span> Информатика</p>
+                        <p><span>Домашнее задание:</span> Задано</p>
+                    </div>
+                </article>
+
+                <article class="student-card">
+                    <div class="student-card__header">
+                        <div class="student-avatar">Э</div>
+                        <div><h3>Элина</h3><p>4 класс</p></div>
+                    </div>
+                    <p class="student-card__description">Подготовка по математике.</p>
+                    <div class="student-info">
+                        <p><span>Предмет:</span> Математика</p>
+                        <p><span>Домашнее задание:</span> Задано</p>
+                    </div>
+                </article>
+
+                <article class="student-card">
+                    <div class="student-card__header">
+                        <div class="student-avatar">Н</div>
+                        <div><h3>Никита</h3><p>8 класс</p></div>
+                    </div>
+                    <p class="student-card__description">Повышение успеваемости по математике.</p>
+                    <div class="student-info">
+                        <p><span>Предмет:</span> Математика</p>
+                        <p><span>Домашнее задание:</span> Выполнено</p>
+                    </div>
+                </article>
+
+                <article class="student-card">
+                    <div class="student-card__header">
+                        <div class="student-avatar">Д</div>
+                        <div><h3>Дима</h3><p>9 класс</p></div>
+                    </div>
+                    <p class="student-card__description">Подготовка к ОГЭ по информатике.</p>
+                    <div class="student-info">
+                        <p><span>Предмет:</span> Информатика</p>
+                        <p><span>Домашнее задание:</span> Не задано</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+    <section class="about">
+    <div class="container">
+        <h2>О проекте</h2>
+        <p>
+            Дневник репетитора - сервис для репетитора, который помогает хранить
+            информацию об учениках и домашних заданиях в одном месте.
+        </p>
+    </div>
+</section>
+
+</main>
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 Дневник репетитора</p>
+    </div>
+</footer>
+
+</body>
+</html>
