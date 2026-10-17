@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Дневник репетитора</title>
+
+    <link
+        rel="stylesheet"
+        href="styles/main.css"
+    >
+
+    <script
+        src="js/app.js"
+        defer
+    ></script>
+</head>
+
+
+<body>
+
+<header class="header">
+
+    <div class="container header__content">
+
+        <a
+            class="logo"
+            href="index.html"
+        >
+            Дневник репетитора
+        </a>
+
+        <nav class="navigation">
+            <a href="#students">Ученики</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="hero">
+
+        <div class="container">
+
+            <p class="hero__label">
+                Рабочее пространство репетитора
+            </p>
+
+            <h1>
+                Ученики и домашние задания в одном месте
+            </h1>
+
+            <p class="hero__description">
+                Удобный кабинет для хранения информации
+                об учениках, предметах и домашних заданиях.
+            </p>
+
+            <a
+                class="button"
+                href="#students"
+            >
+                Перейти к ученикам
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section
+        class="students"
+        id="students"
+    >
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        Ученики
+                    </p>
+
+                    <h2>
+                        Мои ученики
+                    </h2>
+
+                    <p class="section-description">
+                        Здесь можно искать, фильтровать,
+                        сортировать, добавлять и удалять учеников.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="button add-button"
+                    id="open-modal"
+                    type="button"
+                >
+                    + Добавить ученика
+                </button>
+
+            </div>
+
+
+            <div class="student-filter">
+
+                <div class="form-field">
+
+                    <label for="student-search">
+                        Поиск
+                    </label>
+
+                    <input
+                        id="student-search"
+                        type="text"
+                        placeholder="Введите имя ученика"
+                    >
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="subject-filter">
+                        Предмет
+                    </label>
+
+                    <select id="subject-filter">
+
+                        <option value="all">
+                            Все категории
+                        </option>
+
+                        <option value="Математика">
+                            Математика
+                        </option>
+
+                        <option value="Алгебра">
+                            Алгебра
+                        </option>
+
+                        <option value="Информатика">
+                            Информатика
+                        </option>
+
+                        <option value="Физика">
+                            Физика
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="sort-select">
+                        Сортировка
+                    </label>
+
+                    <select id="sort-select">
+
+                        <option value="name-asc">
+                            Имя: А–Я
+                        </option>
+
+                        <option value="name-desc">
+                            Имя: Я–А
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="students-grid"
+                id="students-grid"
+            >
+            </div>
+
+
+            <p
+                class="empty-message"
+                id="empty-message"
+                hidden
+            >
+                Ученики не найдены
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="about">
+
+        <div class="container">
+
+            <h2>
+                О проекте
+            </h2>
+
+            <p>
+                Дневник репетитора — веб-приложение,
+                которое помогает хранить информацию
+                об учениках и домашних заданиях.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <p>
+            © 2026 Дневник репетитора
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Модальное окно -->
+
+<div
+    class="modal"
+    id="student-modal"
+    aria-hidden="true"
+>
+
+    <div class="modal__backdrop"></div>
+
+
+    <div class="modal__content">
+
+        <button
+            class="modal__close"
+            id="close-modal"
+            type="button"
+            aria-label="Закрыть"
+        >
+            ×
+        </button>
+
+
+        <h2>
+            Добавить ученика
+        </h2>
+
+
+        <form
+            id="student-form"
+            novalidate
+        >
+
+
+            <div class="form-field">
+
+                <label for="student-name">
+                    Имя ученика
+                </label>
+
+                <input
+                    id="student-name"
+                    name="name"
+                    type="text"
+                    minlength="2"
+                    required
+                >
+
+                <p
+                    class="error-message"
+                    id="name-error"
+                ></p>
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="student-class">
+                    Класс
+                </label>
+
+                <input
+                    id="student-class"
+                    name="class"
+                    type="number"
+                    min="1"
+                    max="11"
+                    required
+                >
+
+                <p
+                    class="error-message"
+                    id="class-error"
+                ></p>
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="student-subject">
+                    Предмет
+                </label>
+
+                <select
+                    id="student-subject"
+                    name="subject"
+                    required
+                >
+
+                    <option value="">
+                        Выберите предмет
+                    </option>
+
+                    <option value="Математика">
+                        Математика
+                    </option>
+
+                    <option value="Алгебра">
+                        Алгебра
+                    </option>
+
+                    <option value="Информатика">
+                        Информатика
+                    </option>
+
+                    <option value="Физика">
+                        Физика
+                    </option>
+
+                </select>
+
+                <p
+                    class="error-message"
+                    id="subject-error"
+                ></p>
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="student-description">
+                    Цель занятий
+                </label>
+
+                <textarea
+                    id="student-description"
+                    name="description"
+                    minlength="5"
+                    required
+                ></textarea>
+
+                <p
+                    class="error-message"
+                    id="description-error"
+                ></p>
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="student-homework">
+                    Домашнее задание
+                </label>
+
+                <select
+                    id="student-homework"
+                    name="homework"
+                    required
+                >
+
+                    <option value="">
+                        Выберите статус
+                    </option>
+
+                    <option value="Задано">
+                        Задано
+                    </option>
+
+                    <option value="Выполнено">
+                        Выполнено
+                    </option>
+
+                    <option value="Не задано">
+                        Не задано
+                    </option>
+
+                </select>
+
+                <p
+                    class="error-message"
+                    id="homework-error"
+                ></p>
+
+            </div>
+
+
+            <div class="modal__actions">
+
+                <button
+                    class="cancel-button"
+                    id="cancel-modal"
+                    type="button"
+                >
+                    Отмена
+                </button>
+
+                <button
+                    class="button"
+                    type="submit"
+                >
+                    Добавить
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
