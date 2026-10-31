@@ -35,19 +35,6 @@ Backend с REST API и базой данных.
 - `homework` — статус домашнего задания;
 - `created_at` — дата создания записи.
 
-## Используемые технологии
-
-- HTML
-- CSS
-- JavaScript
-- Python
-- FastAPI
-- SQLAlchemy
-- SQLite
-- Pydantic
-- Swagger UI
-- OpenAPI
-
 ## Структура проекта
 
 ```text
