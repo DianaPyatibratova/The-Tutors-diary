@@ -354,7 +354,7 @@ Last 5 minutes
 
 ### Скриншот
 
-> Вставить скриншот Dashboard «Мониторинг Docker-контейнеров».
+![alt text](image.png)
 
 ---
 
