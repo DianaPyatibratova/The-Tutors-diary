@@ -68,7 +68,6 @@ web-программирование 4ЛР/
 ## Конфигурация Prometheus
 
 Для настройки Prometheus был создан файл `prometheus.yml`.
-![Uploading image.png…]()
 
 ```yaml
 global:
